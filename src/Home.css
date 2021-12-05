@@ -1,0 +1,42 @@
+.main-slider{
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+}
+
+h3, h2 {
+  text-align: center;
+
+}
+
+.cat {
+  width: 30%;
+  height: 50vh;
+  display: flex;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.categ {
+  display: flex;
+  width: 100%
+}
+
+.cate-btn {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
+}
