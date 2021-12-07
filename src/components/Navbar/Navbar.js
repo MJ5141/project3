@@ -4,7 +4,9 @@ import './Navbar.css'
 import { Button } from '../Button';
 
 
+
 class Navbar extends Component {
+
   state = { clicked: false}
 
   handleClick = () => {
@@ -14,7 +16,7 @@ class Navbar extends Component {
   render() {
     return(
       <nav className="NavbarItems">
-        <h1 className="navbar-logo"> Iconic <i className="fab fa-react"></i> </h1>
+        <h1 className="navbar-logo"> FitLand <i className="fas fa-running"></i> </h1>
         <div className="menu-icon" onClick={this.handleClick}>
 
          <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>

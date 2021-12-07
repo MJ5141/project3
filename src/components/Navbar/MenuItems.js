@@ -2,31 +2,31 @@
 export const MenuItems = [
   {
     title: 'Men',
-    url: '#',
+    url: '/men',
     cName: 'nav-links'
   },
 
   {
     title: 'Women',
-    url: '#',
+    url: '/women',
     cName: 'nav-links'
   },
 
   {
     title: 'Kids',
-    url: '#',
+    url: '/kids',
     cName: 'nav-links'
   },
 
   {
     title: 'Accessories',
-    url: '#',
+    url: '/accessories',
     cName: 'nav-links'
   },
 
   {
     title: 'Sign up',
-    url: '#',
+    url: '/',
     cName: 'nav-links-mobile'
   },
 ]

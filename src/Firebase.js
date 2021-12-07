@@ -1,4 +1,5 @@
  import firebase from "firebase";
+ import "firebase/firestore";
 
  const firebaseConfig = {
   apiKey: "AIzaSyDEHJFicM-Sa_BkChfERhZzORw0HLw_trg",
@@ -13,7 +14,7 @@
   const app = firebase.initializeApp(firebaseConfig);
   const auth = app.auth();
   const db = app.firestore();
-
+  console.log(db);
   const googleProvider = new firebase.auth.GoogleAuthProvider();
 
   const signInWithGoogle = async () => {
@@ -78,11 +79,11 @@ const logout = () => {
 };
 
 export {
-  auth,
-  db,
-  signInWithGoogle,
-  signInWithEmailAndPassword,
-  registerWithEmailAndPassword,
-  sendPasswordResetEmail,
-  logout,
+    auth,
+    db,
+    signInWithGoogle,
+    signInWithEmailAndPassword,
+    registerWithEmailAndPassword,
+    sendPasswordResetEmail,
+    logout
 };
