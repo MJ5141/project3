@@ -8,6 +8,10 @@
 
 h3, h2 {
   text-align: center;
+}
+
+.p-home {
+  text-align: center;
 
 }
 
@@ -39,4 +43,5 @@ footer {
   padding: 3px;
   background-color: black;
   color: white;
+  padding: 20px;
 }

@@ -46,9 +46,9 @@
   color: #26282B;
 }
 
-.nav-links-mobile {
+/* .nav-links-mobile {
   display: none;
-}
+} */
 
 .menu-icon {
   display: none;
@@ -113,7 +113,7 @@
     color: white;
   }
 
-  .nav-links-mobile {
+  /* .nav-links-mobile {
     display: block;
     text-align: center;
     padding: 1.5rem;
@@ -130,7 +130,7 @@
     background: white;
     color: #5F85DB;
     transition: 250ms;
-  }
+  } */
 
   Button {
     display: none;

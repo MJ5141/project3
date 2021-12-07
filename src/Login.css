@@ -4,13 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+    background: linear-gradient(90deg,  #ffffff, #90B8F8);
 }
 .login__container {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #dcdcdc;
+  background: linear-gradient(90deg, #e3a3b3, pink);
   padding: 30px;
+  border-radius: 20px;
 }
 .login__textBox {
   padding: 10px;

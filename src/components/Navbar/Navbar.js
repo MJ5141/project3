@@ -5,7 +5,9 @@ import { Button } from '../Button';
 
 
 
+
 class Navbar extends Component {
+
 
   state = { clicked: false}
 
@@ -17,13 +19,15 @@ class Navbar extends Component {
     return(
       <nav className="NavbarItems">
         <h1 className="navbar-logo"> FitLand <i className="fas fa-running"></i> </h1>
+
         <div className="menu-icon" onClick={this.handleClick}>
-
          <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-
         </div>
+
         <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+
           {MenuItems.map((item, index) => {
+            console.log(item, index);
             return (
               <li key={index}>
                 <a className={item.cName} href={item.url}>
@@ -33,7 +37,8 @@ class Navbar extends Component {
             )
           })}
         </ul>
-        <Button> Sign Up</Button>
+
+        {/*<Button> Sign Up</Button>*/}
       </nav>
     );
   }

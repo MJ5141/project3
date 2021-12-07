@@ -51,7 +51,9 @@ function Login() {
           Don't have an account? <Link to="/register">Register</Link> now.
         </div>
       </div>
+      
     </div>
+
   );
 }
 export default Login;

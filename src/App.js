@@ -9,6 +9,7 @@ import Men from "./Men";
 import Women from "./Women";
 import Kids from "./Kids";
 import Accessories from "./Accessories";
+import Cart from "./Cart";
 
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/women" component={Women} />
           <Route exact path="/kids" component={Kids} />
           <Route exact path="/accessories" component={Accessories} />
+          <Route exact path="/cart" component={Cart} />
         </Switch>
       </Router>
     </div>
