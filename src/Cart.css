@@ -1,0 +1,55 @@
+.container-2 {
+  margin: 10px;
+}
+
+.crt-tit {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin: 15px;
+}
+
+.crt-viw {
+  display: flex;
+  margin: 55px;
+  justify-content: space-around;
+}
+
+.crt-img {
+  width: 15%;
+  height: 25vh;
+  border: solid black;
+}
+
+.crt-add1 {
+  border: solid 2px black;
+  border-radius: 5px;
+  background: linear-gradient(90deg, gray,gray);
+  color: white;
+  margin: 85px 20px 85px 20px;
+  width: 5vh;
+
+}
+
+.crt-add2 {
+  border: solid 2px black;
+  border-radius: 5px;
+  background: linear-gradient(90deg, gray,gray);
+  color: white;
+  margin: 85px 20px 85px 20px;
+  width: 5vh;
+
+}
+
+.crt-inf {
+  display: flex;
+  align-items: center;
+  margin: 25px
+}
+
+.cart-summary {
+  justify-content: center;
+  align-items: centre;
+  border: solid 2px black;
+  margin: 0px 300px 0px 300px;
+}

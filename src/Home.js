@@ -8,14 +8,14 @@ const Home = () => {
 
   return (
     <div>
-      <h3> Free delivery over $50. Hurry up!</h3>
+      <p className="top-line1"> Free delivery over $50. Hurry up!</p>
 
-      <img onClick={() => { history.push("/women");}} className="main-slider" src={"https://cdn.shopify.com/s/files/1/2636/5824/articles/banner_betrue_web_ok_4287x.jpg?v=1592843505"} />
+      <img onClick={() => { history.push("/women");}} className="home-slider1" src={"https://cdn.shopify.com/s/files/1/2636/5824/articles/banner_betrue_web_ok_4287x.jpg?v=1592843505"} />
 
       <div className="cate-btn">
-      <button onClick={() => { history.push("/men");}}> Shop Men  </button>
-      <button onClick={() => { history.push("/women");}}> Shop Women  </button>
-      <button onClick={() => { history.push("/kids");}}> Shop Kids </button>
+      <button className="home-btn"onClick={() => { history.push("/men");}}> Shop Men  </button>
+      <button className="home-btn"onClick={() => { history.push("/women");}}> Shop Women  </button>
+      <button className="home-btn"onClick={() => { history.push("/kids");}}> Shop Kids </button>
       </div>
         <div className="categ">
 
@@ -27,9 +27,13 @@ const Home = () => {
 
         </div>
 
-      <img onClick={() => { history.push("/accessories");}} className="main-slider" src={"https://images-eu.ssl-images-amazon.com/images/G/31/img19/shoes/March/SPW/Puma/menwmn-combinedsale-banner._CB467757019_.jpg"} />
-      <h2> </h2>
-      <img onClick={() => { history.push("/accessories");}} className="main-slider" src={"https://i.pinimg.com/originals/8d/b6/cf/8db6cfde93cd632d131058eb8cf4e14c.png"} />
+      <p className="top-line2"> Shop latest styles from Puma!</p>
+
+      <img onClick={() => { history.push("/accessories");}} className="home-slider2" src={"https://img.freepik.com/free-vector/black-friday-banner-template_19426-662.jpg?size=626&ext=jpg"} />
+
+      <p className="top-line2"> Fit-bit Versa-3 is now available!</p>
+
+      <img onClick={() => { history.push("/accessories");}} className="home-slider2" src={"https://i.pinimg.com/originals/8d/b6/cf/8db6cfde93cd632d131058eb8cf4e14c.png"} />
 
       <footer>
         <p>&copy; 2021 The Iconic.com</p>

@@ -23,14 +23,20 @@
   background: #90B8F8;
   width: 50%;
   height: 75%;
-  margin: 25px;
+  margin: 35px;
   border-radius: 0px 0px 50px 50px;
   border: solid;
+  align-items: center;
+  display: block;
+  justify-content: space-around;
 }
 
  .price1 {
-  font-size: 20px;
+  font-size: 15px;
   margin: 5px auto;
+  color: black;
+  justify-content: center;
+  align-items: center;
 }
 
 .card:hover {
@@ -41,9 +47,14 @@
   transition: all 0.5s ease;
 }
 
-.cartBtn {
+.men-cart-btn {
   width:50%;
   margin-left:25%;
   margin-right:25%;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  border: solid 2px black;
+  border-radius: 5px;
+  padding: 5px;
+  background: linear-gradient(90deg, red,pink);
+  color: white;
 }
