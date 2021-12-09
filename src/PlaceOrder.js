@@ -33,11 +33,11 @@ let history = useHistory();
                        />
                   <br />
                   <label class="block mb-1 font-bold text-gray-500" htmlFor="Total No of Products">Total amount due</label>
-                  <input type="text" className='form-control' class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500" required value={props.location.state.total} disabled
+                  <input type="text" className='form-control' class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500" required value={"$ " + props.location.state.total} disabled
                         />
 
                   <br />
-                  <button class="block w-full bg-green-400 hover:bg-green-300 p-4 rounded text-green-900 hover:text-green-800 transition duration-300" onClick={() => { history.push("/final");}}>Place Order</button>
+                  <button class="block w-full bg-green-400 hover:bg-green-300 p-4 rounded text-green-900 hover:text-green-800 transition duration-300" onClick={() => { history.push("/final"); }}>Place Order</button>
 
       </form>
     </div>

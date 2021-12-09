@@ -11,12 +11,19 @@ function Login() {
 
   const history = useHistory();
   useEffect(() => {
+    console.log("vbvbvbvb");
     if (loading) {
       // maybe trigger a loading screen
       return;
     }
-    // if (user) history.replace("/home");
+    if (user) {history.replace("/home");
+  
+    console.log(user);
+    }
+
   }, [user, loading]);
+
+
 
   return (
     <div className="login">

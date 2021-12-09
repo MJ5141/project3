@@ -16,9 +16,9 @@ const Cart = () => {
   function updateProductList(id, type) {
     let tempProductList = JSON.parse(JSON.stringify(productList))
     let spliceIndex
-    tempProductList.map((product, index) =>
-
-    {if (index === id) {
+    tempProductList.map((product, index) =>{
+      console.log(index);
+    if (index === id) {
       if ( type === "addQuantity") {
         product.Quantity += 1
       } else {
@@ -29,8 +29,16 @@ const Cart = () => {
       }
     }}
   )
+    console.log(spliceIndex);
+    console.log(tempProductList.length);
 
-  if ( spliceIndex ) {
+  if (tempProductList.length == 1 && spliceIndex == 0){
+    console.log("abcd");
+    tempProductList= []
+
+  }
+  else if ( spliceIndex >= 0 ) {
+    console.log("LMNOP");
     tempProductList.splice(spliceIndex,1)
   }
 
@@ -99,14 +107,17 @@ return (
     <button className="crt-add2" onClick={() => { updateProductList(index, "subQuantity") }}> - </button>
     </div>
   )}
-  <div className="cart-summary">
+  {productList.length == 0 ? "No products in cart" : <div className="cart-summary">
   <h2 className="order-form-head"> Cart Summary </h2>
   <p class="block mb-1 font-bold text-gray-500" class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500" className="lmn">Total no. of items : {totalItems}</p>
   <p class="block mb-1 font-bold text-gray-500" class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500"
   className="lmn">Total amount : $ {total} </p>
   <p> *We are working on card payments, service will be available shortly. Sorry for the Inconvenience.* </p>
-  <button class="block w-full bg-green-400 hover:bg-green-300 p-4 rounded text-green-900 hover:text-green-800 transition duration-300" onClick={() => { history.push({pathname:"/placeorder", state:{total: total}});}}  > Place order </button>
-  </div>
+
+  {sessionStorage.getItem('user_name') ? <button class="block w-full bg-green-400 hover:bg-green-300 p-4 rounded text-green-900 hover:text-green-800 transition duration-300" onClick={() => { history.push({pathname:"/placeorder", state:{total: total}});}}  > Place order </button> : "Please login to checkout"}
+
+  </div>}
+
 
   </div>
 

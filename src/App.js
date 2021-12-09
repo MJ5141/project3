@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from './Login';
 import Register from "./Register";
 import Home from "./Home";
-// import Navbar from "./components/Navbar/Navbar";
 import Men from "./Men";
 import Women from "./Women";
 import Kids from "./Kids";
@@ -14,6 +13,9 @@ import PlaceOrder from "./PlaceOrder";
 import Final from "./Final";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure()
 
 
 
