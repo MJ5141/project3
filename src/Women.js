@@ -70,9 +70,6 @@ function Women() {
         </div>
       )}
       </div>
-      <footer>
-        <p>&copy; 2021 FitLand.com</p>
-      </footer>
       </>
   )
 }

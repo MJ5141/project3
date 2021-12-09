@@ -1,0 +1,12 @@
+.order-form {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.order-form-head {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin: 15px;
+}

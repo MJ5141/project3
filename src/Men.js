@@ -53,7 +53,7 @@ function Men() {
 
   return (
     <>
-    <div>
+    <div className="hmbdy">
       <p className="top-line1"> Free delivery over $50. Hurry up!</p>
       <img className="products-ban" src={"https://i8.amplience.net/i/jpl/desktop-middle-banner-1704x740-9-dec9c2486d57e1a1a8fddf8294f9bb92"} />
     </div>
@@ -71,9 +71,7 @@ function Men() {
         </div>
       )}
     </div>
-    <footer>
-      <p>&copy; 2021 FitLand.com</p>
-    </footer>
+
     </>
   )
 }

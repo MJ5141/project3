@@ -35,10 +35,6 @@ const Home = () => {
 
       <img onClick={() => { history.push("/accessories");}} className="home-slider2" src={"https://i.pinimg.com/originals/8d/b6/cf/8db6cfde93cd632d131058eb8cf4e14c.png"} />
 
-      <footer>
-        <p>&copy; 2021 The Iconic.com</p>
-      </footer>
-
     </div>
   )
 }

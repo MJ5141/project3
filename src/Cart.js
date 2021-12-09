@@ -1,8 +1,12 @@
 import React from 'react';
 import "./Cart.css"
 import { useState } from 'react';
+import { useHistory } from "react-router-dom";
+
+
 
 const Cart = () => {
+  let history = useHistory();
 
   let cartValue = JSON.parse(sessionStorage.getItem('cart'))
   const [productList, setProductList] = useState(cartValue);
@@ -40,27 +44,39 @@ const Cart = () => {
 
 
 }
+console.log(total);
+
 
 function calculateTotal (productList) {
   let total= 0
 
+  if (productList === null) {
+      return
+  } else {
   productList.map(product => {
     let productPrice = product.Price.integerValue * product.Quantity
     total += productPrice
   })
   return total;
-
+}
 }
 
 function calculateItems (productList) {
   let totalItems= 0
 
+  if (productList === null) {
+      return <p> Nothing in cart</p>
+  } else {
   productList.map(product => {
   totalItems += product.Quantity
   })
   return totalItems;
 }
+}
 
+{if (productList === null) {
+    return <p> Nothing in cart</p>
+} else {
 return (
   <>
   <div>
@@ -84,19 +100,21 @@ return (
     </div>
   )}
   <div className="cart-summary">
-  <h2> Cart Summary </h2>
-  <p>Total no. of items : {totalItems}</p>
-  <p>Total amount : $ {total}</p>
-  <button> Proceed to payment </button>
+  <h2 className="order-form-head"> Cart Summary </h2>
+  <p class="block mb-1 font-bold text-gray-500" class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500" className="lmn">Total no. of items : {totalItems}</p>
+  <p class="block mb-1 font-bold text-gray-500" class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500"
+  className="lmn">Total amount : $ {total} </p>
+  <p> *We are working on card payments, service will be available shortly. Sorry for the Inconvenience.* </p>
+  <button class="block w-full bg-green-400 hover:bg-green-300 p-4 rounded text-green-900 hover:text-green-800 transition duration-300" onClick={() => { history.push({pathname:"/placeorder", state:{total: total}});}}  > Place order </button>
   </div>
 
   </div>
 
-  <footer>
-  <p>&copy; 2021 FitLand.com</p>
-  </footer>
+
   </>
 )
+}
+}
 }
 
 export default Cart;

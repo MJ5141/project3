@@ -4,12 +4,16 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from './Login';
 import Register from "./Register";
 import Home from "./Home";
-import Navbar from "./components/Navbar/Navbar";
+// import Navbar from "./components/Navbar/Navbar";
 import Men from "./Men";
 import Women from "./Women";
 import Kids from "./Kids";
 import Accessories from "./Accessories";
 import Cart from "./Cart";
+import PlaceOrder from "./PlaceOrder";
+import Final from "./Final";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 
 
@@ -17,7 +21,7 @@ import Cart from "./Cart";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+     <Navbar />
       <Router>
         <Switch>
           <Route exact path="/" component={Login} />
@@ -28,8 +32,11 @@ function App() {
           <Route exact path="/kids" component={Kids} />
           <Route exact path="/accessories" component={Accessories} />
           <Route exact path="/cart" component={Cart} />
+          <Route exact path="/placeorder" component={PlaceOrder} />
+          <Route exact path="/final" component={Final} />
         </Switch>
       </Router>
+    <Footer />
     </div>
   );
 }

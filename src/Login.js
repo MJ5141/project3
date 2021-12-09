@@ -15,7 +15,7 @@ function Login() {
       // maybe trigger a loading screen
       return;
     }
-    if (user) history.replace("/home");
+    // if (user) history.replace("/home");
   }, [user, loading]);
 
   return (
@@ -51,7 +51,7 @@ function Login() {
           Don't have an account? <Link to="/register">Register</Link> now.
         </div>
       </div>
-      
+
     </div>
 
   );
