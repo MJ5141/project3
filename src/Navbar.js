@@ -11,7 +11,7 @@ function Navbar() {
 
   const [isLoggedIn, setIsLoggedIn] = useState((sessionStorage.getItem('user_name')) ? true : false);
 
-  
+
 
   console.log(isLoggedIn);
   return (

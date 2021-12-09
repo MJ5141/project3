@@ -63,22 +63,46 @@ function Kids() {
   return (
     <>
     <div>
-      <h2> Kids shoes are coming shortly!</h2>
+
       <img className="products-ban" src={"https://jpl.a.bigcontent.io/v1/static/desktop-middle-banner-1704x740-12-f08d34d55071287ad7b734af11530ef0"} />
     </div>
 
-    <div className="container">
-      {products.map(product =>
-        <div className="card">
-        <img className="prod1" src={product.Image.stringValue}/>
-        <h3 className="price1">{product.Brand.stringValue}</h3>
-        <h3 className="price1">{product.Model.stringValue}</h3>
-        <h3 className="price1">{product.Price.stringValue}</h3>
-        {/*<p>{product.Info.stringValue}</p>*/}
-        <button className="men-cart-btn" onClick={() => { addToCart(product); notify();}}> Add To Cart 🛒 </button>
+    {products.map(product =>
+    <div class="flex grid-flow-row grid-cols-4  bg-gray-100 mr-15">
+      <div class="flex-none w-48 relative mr-15">
+        <img src={product.Image.stringValue} alt="" class="rounded-tl-lg rounded-tr-lg" />
+      </div>
+      <form class="flex-auto p-6">
+        <div class="flex flex-wrap">
+          <h1 class="flex-auto text-lg font-semibold text-gray-900">
+            {product.Model.stringValue}
+          </h1>
+          <div class="text-lg font-semibold text-gray-500">
+            $ {product.Price.integerValue}
+          </div>
+          <div class="w-full flex-none text-sm font-medium text-gray-700 mt-2">
+            {product.Brand.stringValue}
+          </div>
         </div>
-      )}
+        <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-gray-200">
+          <div class="space-x-2 flex text-sm">
+            <p>{product.Info.stringValue}</p>
+          </div>
+        </div>
+        <div class="flex space-x-4 mb-6 text-sm font-medium">
+          <div class="flex-auto flex space-x-4">
+            <button class="h-10 px-6 font-semibold rounded-md bg-black text-white" type="submit">
+              <button  onClick={() => { addToCart(product); notify();}}> Add To Cart 🛒 </button>
+            </button>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">
+          Free shipping all over the Australia.
+        </p>
+      </form>
     </div>
+    )}
+
 
     </>
   )
