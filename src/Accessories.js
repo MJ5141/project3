@@ -6,15 +6,9 @@ import firebase from 'firebase';
 import { useHistory } from "react-router-dom";
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 toast.configure()
 
-
-
-
 function Accessories() {
-
-
 
   let history = useHistory();
 
@@ -73,10 +67,12 @@ function Accessories() {
     </div>
 
     {products.map(product =>
+
     <div class="flex grid-flow-row grid-cols-4  bg-gray-100 mr-15">
       <div class="flex-none w-48 relative mr-15">
         <img src={product.Image.stringValue} alt="" class="rounded-tl-lg rounded-tr-lg" />
       </div>
+
       <form class="flex-auto p-6">
         <div class="flex flex-wrap">
           <h1 class="flex-auto text-lg font-semibold text-gray-900">
@@ -107,8 +103,6 @@ function Accessories() {
       </form>
     </div>
     )}
-
-
     </>
   )
 }

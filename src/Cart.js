@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 
 
 const Cart = () => {
+
   let history = useHistory();
 
   let cartValue = JSON.parse(sessionStorage.getItem('cart'))
@@ -117,11 +118,7 @@ return (
   {sessionStorage.getItem('user_name') ? <button class="block w-full bg-green-400 hover:bg-green-300 p-4 rounded text-green-900 hover:text-green-800 transition duration-300" onClick={() => { history.push({pathname:"/placeorder", state:{total: total}});}}  > Place order </button> : "Please login to checkout"}
 
   </div>}
-
-
   </div>
-
-
   </>
 )
 }

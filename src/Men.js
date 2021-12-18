@@ -103,8 +103,6 @@ function Men() {
     </div>
     )}
 
-
-
     </>
   )
 }
